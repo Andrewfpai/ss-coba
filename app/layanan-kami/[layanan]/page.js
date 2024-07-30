@@ -33,9 +33,9 @@ export default async function Page({params}){
 
     return (
       <>
-        <Navbar/>
+        <Navbar departemen={departemen} layanan={layanan}/>
           <Services params={params} layanan={layanan} promo={promo} departemen={departemen} />
-        <Footer/>
+        <Footer departemen={departemen} layanan={layanan}/>
       </>
     )
     

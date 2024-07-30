@@ -129,7 +129,7 @@ const NavbarClient = (props) => {
                                                 <div className="w-[2.5px] h-[165px] absolute bg-[rgba(189,189,189,0.8)] left-[430px] top-[328px] 2md:block hidden"></div>
                                                 
                                                 <ul className="2md:!h-[54.4%] flex 2md:flex-row 2md:flex-wrap 2md:pt-[25px] 2md:pb-[45px] 2md:pl-[40px] 2md:gap-x-[30px] 2md:gap-y-0 flex-col sm:gap-y-[20px] gap-y-[10px] 2md:mt-0 sm:mt-[20px] mt-[14px]">
-                                                    {department.map((department,index) => {
+                                                    {department?.map((department,index) => {
 
                                                         const isActiveDepartment = pathname.slice(route.href[0].length+1).startsWith(department.href);
                                                        
@@ -146,9 +146,9 @@ const NavbarClient = (props) => {
                                                 </ul>
 
                                                 <ul className="2md:!h-[45.6%] 2md:bg-[rgba(189,189,189,0.3)] flex 2md:flex-row 2md:flex-wrap 2md:pt-[25px] 2md:pb-[45px] 2md:pl-[40px] 2md:gap-x-[30px] sm:gap-y-[20px] gap-y-[10px] 2md:gap-y-[5px] 2md:rounded-b-[15px] flex-col 2md:mt-0 sm:mt-[20px] mt-[10px]">
-                                                    {layanan.map((service,index) => {
+                                                    {layanan?.map((service,index) => {
 
-                                                        const isActiveService = pathname.slice(route.href[1].length+1).startsWith(service.href);
+                                                        const isActiveService = pathname?.slice(route.href[1].length+1).startsWith(service.href);
 
                                                         return (
                                                             <li key={index} className="flex items-center gap-[12px] 2md:w-[180px] sm:w-[220px] 2md:h-[50px] cursor-pointer">

@@ -1,8 +1,10 @@
-import About from './about';
+
 import Navbar from "@/app/_components/navbar/page.js";
 import Footer from "@/app/_components/footer/page.js";
+import AboutClient from './about.client';
 
 
+import {getDepartemen, getLayanan, getDokter, getInformation, getTentangKami } from '@/sanity/sanity.query';
 
 
 export const metadata = {
@@ -10,12 +12,19 @@ export const metadata = {
   description: 'Klinik Sunrise Medika bertujuan untuk melayani masyarakat dan memastikan Anda mendapatkan pelayanan terbaik'
 }
 
-export default function Page(){
+export default async function About(){
+
+    const departemen = await getDepartemen()
+    const layanan = await getLayanan()
+    const dokter = await getDokter()
+    const information = await getInformation()
+    const tentangKami = await getTentangKami()
+
     return (
       <>
-        <Navbar/>
-          <About/>
-        <Footer/>
+        <Navbar departemen={departemen} layanan={layanan}/>
+          <AboutClient dokter={dokter} information={information} tentangKami={tentangKami}/>
+        <Footer departemen={departemen} layanan={layanan}/>
       </>
     )
     

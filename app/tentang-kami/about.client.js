@@ -60,14 +60,14 @@ export default function AboutClient(props){
     return(
         <div className="flex flex-col max-w-[1650px] w-[90%] mx-auto font-raleway lg:text-[24px] md:text-[16px] text-[13px] pb-[70px] lg:pb-[150px]">
             {/* {console.log(tentangKami)} */}
-            <div className="flex flex-col md:flex-row justify-between mt-[120px] md:mt-[220px] md:space-x-[4.51%]">
-                <div className="w-full md:w-1/2 p-6 pb-8 md:p-[2.5%] border-mainBrown border-[3px] rounded-[15px] relative  pt-6  max-w-full order-2 md:order-1">
-                    <h2 className="text-lg lg:text-2xl font-extrabold text-mainBrown leading-[30px] tracking-[0.95px] bg-white p-3 absolute -top-[30px] lg:-top-[32px] left-[11.3%] ">Visi dan Misi</h2>
+            <div className="flex flex-col md:flex-row justify-between mt-[160px] md:mt-[220px] md:space-x-[4.51%]">
+                <div className="flex-1 md:w-1/2 p-6 pb-8 md:p-[2.5%] border-mainBrown border-[3px] rounded-[15px] relative  pt-6  max-w-full order-2 md:order-1">
+                    <h2 className="text-lg lg:text-2xl 2xl:text-3xl font-extrabold text-mainBrown leading-[30px] tracking-[0.95px] bg-white p-3 absolute -top-[30px] lg:-top-[32px] left-[11.3%] ">Visi dan Misi</h2>
             
-                        <div className='font-medium leading-7 text-xs md:text-sm tracking-[0.30px] xs:tracking-[0.95px] md:tracking-[0.30px] lg:tracking-[0.95px]'>
-                        <div className='px-4 pb-6 md:p-[5.35%] '><PortableTextRenderer value={tentangKami?.visi} /></div>
-                        <div className='p-6 md:p-[5.35%] bg-[#E7E7E7] rounded-[15px]'><PortableTextRenderer value={tentangKami?.misi} /></div>
-                      </div>
+                        <div className='font-medium leading-7 text-xs tracking-[0.30px] xs:tracking-[0.95px] md:tracking-[0.30px] lg:tracking-[0.95px]'>
+                          <div className='px-4 pb-6 md:p-[5.35%] '><PortableTextRenderer value={tentangKami?.visi} /></div>
+                          <div className='p-6 md:p-[5.35%] bg-[#E7E7E7] rounded-[15px]'><PortableTextRenderer value={tentangKami?.misi} /></div>
+                        </div>
               
                           
                         
@@ -76,7 +76,7 @@ export default function AboutClient(props){
                 </div>
                 {/* <p className='leading-5 tracking-[0.30px] xs:tracking-[0.95px] md:tracking-[0.30px] lg:tracking-[0.95px] font-medium text-xs lg:text-[1em]'>Silahkan klik tombol dibawah ini untuk melihat jadwal praktek dokter klinik kami. Untuk pertanyaan atau pembuatan janji konsultasi lebih lanjut, silahkan hubungi kami.</p> */}
 
-                <div className='flex w-full md:w-1/2 order-1 md:order-2 mb-[50px] md:mb-0 max-w-[607px]'>
+                <div className='flex flex-1 w-full md:w-1/2 order-1 md:order-2 mb-[50px] md:mb-0 max-w-[607px]'>
                     {tentangKami.illustrasi?<Image priority width={0} height={0} sizes='100vw' className='w-[607px] rounded-[15px] object-cover object-center shadow-image-cc h-[250px] md:h-auto' src={tentangKami?.illustrasi} alt={'Illustrasi Tentang Kami'}/>:null}
                 </div>
 

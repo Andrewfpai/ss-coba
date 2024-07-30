@@ -17,10 +17,10 @@ export default function Heading(props){
                 <div className="z-20 text-mainBrown space-y-4 md:space-y-9 pt-7 sm:pt-10 md:pt-[104px] pb-[30px] md:pb-[80px] px-[6.67%] md:px-[4.98%] leading-tight md:leading-[58px]">
                     <h1 className="font-radioCanada text-[1em] font-bold max-w-[600px]">{props.heading?.title}</h1>
                     <p className="text-[0.40em] font-raleway font-semibold max-w-[550px] leading-4 md:leading-[25px] tracking-[0.3px] md:tracking-[0.95px]">{props.heading?.subtitle}</p>
-                    <button className="text-[0.40em] sm:text-[0.29em] font-raleway font-semibold py-3 px-4 md:px-[30px] md:py-[0px] bg-mainOrange rounded-[20px] shadow-button-tw hover:bg-mainYellow ease-out duration-300">Daftar Sekarang</button>
+                    <Link href="https://wa.me/628112681977" passHref><button className="text-[0.40em] sm:text-[0.29em] font-raleway font-semibold py-3 px-4 md:px-[30px] md:py-[0px] bg-mainOrange rounded-[20px] shadow-button-tw hover:bg-mainYellow ease-out duration-300">Daftar Sekarang</button></Link>
                 </div>
 
-                <div className="z-20 flex flex-col md:flex-row justify-between items-center rounded-b-[15px] p-5 md:px-[4.98%] md:py-6 background-custom-cc lg:text-[24px] md:text-[20px] text-[16px] font-raleway">
+                <div className="z-20 flex flex-col md:flex-row items-start justify-between md:items-center rounded-b-[15px] p-5 md:px-[4.98%] md:py-6 background-custom-cc lg:text-[24px] md:text-[20px] text-[16px] font-raleway">
                     <div className="flex flex-row lg:flex-row gap-4 md:gap-[15%] md:w-[28%] md:flex-col text-left md:text-center lg:text-left">
                         <Image width={0} height={0} sizes='100vw' className="w-7 h-7 md:w-11 md:h-11 mx-auto" src={Icon} alt="Icon" />
                         <div className="flex flex-col gap-[5px] text-xs md:text-xs lg:text-sm xs:text-sm -mt-[2px] md:mt-4 lg:-mt-1 ">

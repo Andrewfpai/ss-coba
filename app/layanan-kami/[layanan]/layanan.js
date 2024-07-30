@@ -37,9 +37,9 @@ export default function Services(props){
         </div>
 
 
-        <div className="flex flex-col lg:flex-row justify-center flex-wrap w-full mt-[3.458em] max-w-[90%] mx-auto space-y-10 lg:space-y-0">
+        <div className="flex flex-col lg:flex-row justify-center flex-wrap mt-[3.458em] mx-auto w-[90%] max-w-[1650px]  space-y-10 lg:space-y-0 ">
             {promo?.images?.map((picture,index) => 
-              <div key={index} className="max-w-[80%] lg:w-[40%] lg:max-w-[594px] mx-auto ">
+              <div key={index} className=" mx-auto ">
                 <Image priority width={0} height={0} sizes='100vw' className="w-[600px] object-contain" src={picture?.poster} alt={picture?.caption} />
               </div>
               
@@ -47,19 +47,19 @@ export default function Services(props){
         </div>
 
  
-        <div className='flex justify-center'>
-                <div className='flex flex-col justify-around w-full max-w-[80%]'>
-                    <div className='flex flex-row items-center mt-12'>
-                        <span className="border-l-[8px] md:border-l-[10px] h-[30px] md:h-[40px] border-mainOrange"></span>
-                        <h2 className='text-mainBrown text-lg md:text-2xl font-extrabold ml-3 md:ml-6 tracking-[0.95px]'>Syarat & Ketentuan</h2>
-                    </div>
+        <div className='flex mx-auto w-[80%] max-w-[1650px] mt-20'>
+          <div className='flex flex-col justify-around w-full '>
+              <div className='flex flex-row items-center'>
+                  <span className="border-l-[8px] md:border-l-[10px] h-[30px] md:h-[40px] border-mainOrange"></span>
+                  <h2 className='text-mainBrown text-lg md:text-2xl font-extrabold ml-3 md:ml-6 tracking-[0.95px]'>Syarat & Ketentuan</h2>
+              </div>
 
-                    <div className='bg-[#E7E7E7] p-[25px] mt-10 rounded-[12.91px] text-[12px] md:text-sm'>
-                        <div className='p-2 md:px-8 h-[320px] overflow-y-auto custom-scrollbar-cc'>
-                          <PortableTextRenderer value={matchingLayanan?.syaratKetentuan} />
-                        </div>
-                    </div>
-                </div>
+              <div className='bg-[#E7E7E7] p-[25px] mt-10 rounded-[12.91px] text-[12px] md:text-sm'>
+                  <div className='p-2 md:px-8 h-[320px] overflow-y-auto custom-scrollbar-cc'>
+                      <PortableTextRenderer value={matchingLayanan?.syaratKetentuan} />
+                  </div>
+              </div>
+          </div>
                     
         </div>
           

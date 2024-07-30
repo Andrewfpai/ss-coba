@@ -99,7 +99,7 @@ async function Home() {
 
   return (
     <div className="relative bg-[#F6F6F6]">
-      <Navbar/>
+      <Navbar departemen={departemen} layanan={layanan}/>
       <Heading heading={heading} usp={usp}/>
       <Information information={information}/>
       <Department departemen={departemen} layanan={layanan}/>

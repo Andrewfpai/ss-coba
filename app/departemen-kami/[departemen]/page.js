@@ -28,9 +28,9 @@ export default async function Page({params}){
 
     return (
       <>
-      <Navbar/>
-      <Departments params={params} departemen={departemen} layanan={layanan} />
-      <Footer/>
+      <Navbar departemen={departemen} layanan={layanan}/>
+        <Departments params={params} departemen={departemen} layanan={layanan} />
+      <Footer departemen={departemen} layanan={layanan}/>
       </>
     )
    }

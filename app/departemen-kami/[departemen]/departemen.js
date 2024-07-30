@@ -31,24 +31,24 @@ export default function Departments(props){
     return(
         <div id="department" className="flex flex-col mx-auto font-raleway bg-[#F6F6F6] ">
             {/* {console.log("departemen",departemen)} */}
-        <div className='flex flex-col bg-mainGray py-9 mt-[120px] md:mt-[170px] '>
-            {matchingDepartemen?<Image width={0} height={0} sizes='100vw' className='sm:w-[60px] w-[20px] mx-auto' src={matchingDepartemen?.icon} alt={"Icon "+matchingDepartemen.name}/> :null}
-            {/* {console.log("matchingDepartemen",matchingDepartemen)} */}
-            {/* {console.log("Foto",matchingDepartemen?.dokter[0]?.foto)} */}
+            <div className='flex flex-col bg-mainGray py-9 mt-[120px] md:mt-[170px] '>
+                {matchingDepartemen?<Image width={0} height={0} sizes='100vw' className='sm:w-[60px] w-[20px] mx-auto' src={matchingDepartemen?.icon} alt={"Icon "+matchingDepartemen.name}/> :null}
+                {/* {console.log("matchingDepartemen",matchingDepartemen)} */}
+                {/* {console.log("Foto",matchingDepartemen?.dokter[0]?.foto)} */}
 
-            {matchingDepartemen && (
-                <h1 className='mt-5 text-center text-lg xs:text-2xl md:text-[32px] text-mainBrown font-bold tracking-[0.95px]'>
-                    {matchingDepartemen?.name}
-                </h1>
-                // <h1 className='px-7 py-[10px] text-center text-[32px] text-mainBrown font-bold tracking-[0.95px]'>saraf</h1> 
+                {matchingDepartemen && (
+                    <h1 className='mt-5 text-center text-lg xs:text-2xl md:text-[32px] text-mainBrown font-bold tracking-[0.95px]'>
+                        {matchingDepartemen?.name}
+                    </h1>
+                    // <h1 className='px-7 py-[10px] text-center text-[32px] text-mainBrown font-bold tracking-[0.95px]'>saraf</h1> 
 
-            )}
-            {/* <h1 className='px-7 py-[10px] text-center text-[32px] text-mainBrown font-bold tracking-[0.95px]'>{params.departemen}</h1> */}
-        </div>
+                )}
+                {/* <h1 className='px-7 py-[10px] text-center text-[32px] text-mainBrown font-bold tracking-[0.95px]'>{params.departemen}</h1> */}
+            </div>
 
-        <div className='flex justify-center'>
+            <div className='flex mx-auto w-[80%] max-w-[1650px]'>
                 
-                <div className='flex flex-col justify-around w-full max-w-[80%]'>
+                <div className='flex flex-col justify-around w-full flex-1'>
                     <div className='flex flex-row items-center mt-14 md:mt-24'>
                         <span className="border-l-[8px] md:border-l-[10px] h-[30px] md:h-[40px] border-mainOrange"></span>
                         <h2 className='text-mainBrown text-lg md:text-2xl font-extrabold ml-3 md:ml-6 tracking-[0.95px]'>Dokter Kami</h2>
@@ -57,14 +57,14 @@ export default function Departments(props){
                     {matchingDepartemen?.dokter?.map((item, index)=>{
 
                     return(
-                    <div key={index} className='flex flex-col md:flex-row mt-6 md:mt-10 md:space-x-[6.51%] '>
+                    <div key={index} className='flex flex-1 flex-col md:flex-row mt-6 md:mt-10 md:space-x-[6.51%] '>
                         
 
                         <div className='max-w-[523px]'>
                             <Image priority width={0} height={0} sizes='100vw' className="w-[523px] rounded-[15px] object-cover object-top md:object-center h-[170px] md:h-[360px]" src={item?.foto} alt={"Foto "+item?.nama}/>
                         </div>
 
-
+                            {/* SECTION KANAN DOKTER KAMI */}
                         
                             <div className='relative mt-8 mb-12 md:mt-12 w-full md:min-w-[400px] md:max-w-[570px] text-md md:text-2xl'>
                                 {/* {console.log(item)} */}
@@ -98,22 +98,17 @@ export default function Departments(props){
                                     </div>
                                 </div>
 
-                                <Link href="https://wa.me/628112681977" passHref><button className="text-[0.667em] font-raleway font-semibold px-[20px] py-[10px] md:px-[30px] md:py-[17px] bg-brightYellow rounded-[10px] md:rounded-[20px] shadow-button-tw hover:bg-mainOrange ease-out duration-300 mt-5 md:mt-11">Hubungi Dokter</button></Link>
-                            
+                                <Link href="https://wa.me/628112681977" passHref><button className="text-[0.667em] font-raleway font-semibold px-[20px] py-[10px] md:px-[30px] md:py-[17px] bg-brightYellow rounded-[10px] md:rounded-[20px] shadow-button-tw hover:bg-mainOrange ease-out duration-300 mt-2 md:mt-11">Hubungi Dokter</button></Link>
                             </div>
                     </div>
-                            )
-                        
-                          })} 
-
-                    
+                            )})} 
                 </div>
 
             </div>
 
 
-            <div className='flex justify-center'>
-                <div className='flex flex-col justify-around w-full max-w-[80%]'>
+            <div className='flex mx-auto w-[80%] max-w-[1650px]'>
+                <div className='flex flex-col justify-around w-full '>
                     <div className='flex flex-row items-center mt-12'>
                         <span className="border-l-[8px] md:border-l-[10px] h-[30px] md:h-[40px] border-mainOrange"></span>
                         <h2 className='text-mainBrown text-lg md:text-2xl font-extrabold ml-3 md:ml-6 tracking-[0.95px]'>Syarat & Ketentuan</h2>
@@ -126,17 +121,17 @@ export default function Departments(props){
                     </div>
                 </div>
                     
-        </div>
+            </div>
 
                        
-
-        <div className="pt-[95px] mb-[7.29em] text-[#503129] tracking-[1.1px] lg:text-[24px] md:text-[20px] text-[16px] mx-auto w-full">
             <div className="h-[0.75em] w-full bg-[#FF9704] mt-[115px] mb-[3em]"></div>
-            <h2 className="mx-auto text-center font-extrabold text-[1em] 2md:mb-[20px] mb-[25px]">Departemen dan Layanan Lainnya</h2>
-        
-            <Department department={matchingDepartemen?.name} layanan={layanan} departemen={departemen}/>                
-        
-        </div>
+
+            <div className="pt-[95px] mb-[7.29em] text-[#503129] tracking-[1.1px] lg:text-[24px] md:text-[20px] text-[16px] ">
+                <h2 className="mx-auto text-center font-extrabold text-[1em] 2md:mb-[20px] mb-[25px]">Departemen dan Layanan Lainnya</h2>
+            
+                <Department department={matchingDepartemen?.name} layanan={layanan} departemen={departemen}/>                
+            
+            </div>
 
 
         </div>

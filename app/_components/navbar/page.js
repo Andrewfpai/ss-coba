@@ -1,13 +1,12 @@
 import NavbarClient from "@/app/_components/navbar/navbar.client.js";
 
-import { getDepartemen, getLayanan } from "@/sanity/sanity.query";
 
 
-export default async function Navbar(){
+export default async function Navbar(props){
 
 
-    const departemen = await getDepartemen()
-    const layanan = await getLayanan()
+    const {departemen, layanan} = props
+    
 
     return (
       <>

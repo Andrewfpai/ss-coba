@@ -4,10 +4,9 @@ import logo from './assets/logo.svg';
 import Link from 'next/link';
 import { getDepartemen, getLayanan } from '@/sanity/sanity.query';
 
-const Footer = async () => {
+const Footer = async (props) => {
 
-    const departemen = await getDepartemen()
-    const layanan = await getLayanan()
+    const {departemen, layanan} = props
 
     const navigations = [
         {
