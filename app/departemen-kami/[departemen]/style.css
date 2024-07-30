@@ -1,0 +1,90 @@
+.custom-scrollbar-cc::-webkit-scrollbar {
+    width: 15px;
+    border-radius: 9.21px;
+    box-shadow: inset 0 0.74px 4.36px rgba(0, 0, 0, 0.25);
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: rgba(217, 217, 217, 0.5);
+    border-radius: 9.21px;
+    
+  }
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 9.21px; /* Rounded borders for the thumb */
+    border: 3px solid transparent; /* Simulate padding inside the thumb */
+    background-clip: content-box; /* Ensures the background doesn't bleed into the border */
+  }
+  
+  
+  
+  @media only screen and (min-width: 768px) {
+    
+    .custom-scrollbar-cc::-webkit-scrollbar {
+      width: 31px;
+      border-radius: 41px;
+      box-shadow: inset 0 3.31px 19.62px rgba(0, 0, 0, 0.25);
+    }
+    
+    /* Track */
+    ::-webkit-scrollbar-track {
+  
+      border-radius: 41px;
+      
+    }
+    /* Handle */
+  ::-webkit-scrollbar-thumb {
+  
+      border-radius: 41px; /* Rounded borders for the thumb */
+      border: 5px solid transparent; /* Simulate padding inside the thumb */
+      background-clip: content-box; /* Ensures the background doesn't bleed into the border */
+    }
+  }
+  
+
+
+
+  
+  .department-service-box {
+    box-shadow: 10px 8px 10px 1px rgba(0,0,0,0.18);
+    -webkit-box-shadow: 10px 8px 10px 1px rgba(0,0,0,0.18);
+    -moz-box-shadow: 10px 8px 10px 1px rgba(0,0,0,0.18);
+    border:none;
+    background:none;
+    transform:none;
+
+    transition-property: border, background, transform;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out; 
+}
+
+.department-service-box:hover{
+    background: white !important;
+    border: 4px solid #9D5C00;
+    transform:scale(1.04);
+}
+
+.department-gradient {
+    background:linear-gradient(100deg,rgba(255, 214, 4,0.8) ,rgba(255, 214, 4, 0.3));
+}
+
+.service-gradient {
+    background:linear-gradient(120deg,rgba(255, 151, 4, 0.8) 0%,#FFD604 90%);
+}
+
+.promo {
+  transition-property: border, background, color, padding-top;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+  cursor:pointer; 
+  box-sizing:border-box;
+}
+
+.department-service-box:hover .promo {
+  color:#FF0000 !important;
+  border:3.5px solid #FF0000;
+  background:white;
+  padding-top:0.12em;
+}

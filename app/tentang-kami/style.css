@@ -1,0 +1,9 @@
+.shadow-image-cc{
+    box-shadow: 0 7px 11.8px rgba(0, 0, 0, 0.46) inset;
+}
+
+.drop-shadow-cc{
+    filter: drop-shadow(-14.97px -14.97px 29.3px #FFFFFF);
+    filter: drop-shadow(18.23px 18.23px 32.55px rgba(13, 39, 80, 0.16));
+ 
+}
