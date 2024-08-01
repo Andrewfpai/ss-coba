@@ -1,0 +1,17 @@
+.shadow-button-cc{
+    /* state=hover */
+
+box-sizing: border-box;
+
+/* Auto layout */
+
+
+
+
+
+/* 
+background: #F6F6F6; */
+box-shadow: inset 0px 4px 6.1px rgba(0, 0, 0, 0.25);
+border-radius: 20px;
+
+}
