@@ -20,7 +20,7 @@ export default async function siteMap() {
                 priority: 0.8,
               })),
               ...(await getLayanan()).map((layanan) => ({
-                url: `https:/sunrisemedika.com/departemen/${layanan.href}`,
+                url: `https:/sunrisemedika.com/layanan/${layanan.href}`,
                 lastModified: new Date(),
                 changeFrequency: 'monthly',
                 priority: 0.8,
