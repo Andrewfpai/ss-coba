@@ -99,7 +99,7 @@ export default function AboutClient(props){
 
                 <div className="our-doctors-container flex flex-wrap justify-between gap-[20px] gap-y-[2.834em]">
                   {dokter?.map((doctor, index) => 
-                    <div key={index} className=" w-[12.33em] h-[18.75em] shadow-button-tw rounded-[15px] relative ">
+                    <div key={index} className="flex-initial mx-auto xs:mx-0 w-[12.33em] h-[18.75em] shadow-button-tw rounded-[15px] relative ">
                       <div className="img-container w-full h-[63.56%] flex shadow-image-dokter-cc rounded-[15px]">
                         {/* {console.log(doctor.foto2)} */}
                         {/* {dokter?<Image priority width={0} height={0} sizes='100vw' src={urlFor(doctor?.foto2).width().url()} className='w-full object-cover rounded-t-[15px] ' alt={doctor?.name+"- Sunrise Medika"}/>:null} */}
@@ -143,7 +143,7 @@ export default function AboutClient(props){
               <div className='flex flex-col lg:flex-row justify-between  gap-[3.11%] font-raleway '>
                   
                   {/* LEFT SECTION */}
-                  <div className='bg-[#F6F6F6] rounded-[10px] md:bg-none md:border-mainBrown md:border-[3px] md:rounded-[15px] relative mb-6 lg:mb-0 px-8 pr-5 lg:pr-[2.8%] lg:px-[3.74%] py-6 lg:py-10 w-full lg:max-w-[58.8%] drop-shadow-cc'>
+                  <div className='bg-[#F6F6F6] rounded-[10px] md:bg-none md:border-mainBrown md:border-[3px] md:rounded-[15px] relative mb-6 lg:mb-0 px-8 pr-5 lg:pr-[2.8%] lg:px-[3.74%] py-6 lg:py-10 w-full lg:max-w-[58.8%]'>
                       
 
                       {/* Lokasi */}
