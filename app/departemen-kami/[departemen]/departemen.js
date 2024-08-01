@@ -29,7 +29,7 @@ export default function Departments(props){
 
      
     return(
-        <div id="department" className="flex flex-col mx-auto font-raleway bg-[#F6F6F6] ">
+        <div id="department" className="min-h-full flex flex-col mx-auto font-raleway bg-[#F6F6F6] ">
             {/* {console.log("departemen",departemen)} */}
             <div className='flex flex-col bg-mainGray py-9 mt-[120px] md:mt-[170px] '>
                 {matchingDepartemen?<Image width={0} height={0} sizes='100vw' className='sm:w-[60px] w-[20px] mx-auto' src={matchingDepartemen?.icon} alt={"Icon "+matchingDepartemen.name}/> :null}
