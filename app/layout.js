@@ -65,7 +65,7 @@ export default function RootLayout({ children }) {
       <body className="relative">
         
         {children}
-        <Link href="https://wa.me/628112681977" passHref><Image className="wa-icon xs:w-[80px] w-[65px] fixed bottom-[50px] right-[20px] z-[500]" src={waIcon} alt="Whatsapp Icon - Sunrise Medika"/></Link>
+        <Link href="https://wa.me/628112681977" passHref><Image priority={true} className="wa-icon xs:w-[80px] w-[65px] fixed bottom-[50px] right-[20px] z-[500]" src={waIcon} alt="Whatsapp Icon - Sunrise Medika"/></Link>
         
         <GoogleAnalytics gaId="G-J3HYDS9C6T" />
         <GoogleTagManager gtmId="GTM-W5N6LLQJ" />

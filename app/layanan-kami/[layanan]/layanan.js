@@ -22,7 +22,7 @@ export default function Services(props){
  
 
   return (
-    <div className="flex flex-col mx-auto font-raleway bg-[#F6F6F6] text-[24px]">
+    <div className="overflow-y-auto flex flex-col mx-auto font-raleway bg-[#F6F6F6] text-[24px]">
       {/* {console.log("layanan",promo)} */}
         <div className='flex flex-col bg-[rgba(255,233,123,0.42)] py-9 mt-[120px] md:mt-[170px] '>
             {matchingLayanan?<Image width={0} height={0} sizes='100vw' className='sm:w-[60px] w-[20px] mx-auto' src={matchingLayanan?.icon} alt={"Icon "+matchingLayanan?.name}/>:null}
@@ -37,7 +37,7 @@ export default function Services(props){
         </div>
 
 
-        <div className="flex flex-col lg:flex-row justify-center flex-wrap mt-[3.458em] mx-auto w-[90%] max-w-[1650px]  space-y-10 lg:space-y-0 ">
+        <div className="flex flex-col lg:flex-row justify-center flex-wrap mt-[3.458em] mx-auto w-[90%] max-w-[1650px]  space-y-10 xl:space-y-0 ">
             {promo?.images?.map((picture,index) => 
               <div key={index} className=" mx-auto ">
                 <Image priority width={0} height={0} sizes='100vw' className="w-[600px] object-contain" src={picture?.poster} alt={picture?.caption} />
