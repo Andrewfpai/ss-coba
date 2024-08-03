@@ -127,12 +127,12 @@ const Department = (props) => {
     }
 
 
-
+    
 
     
   return (
     <div id="department" className="font-raleway text-[#503129] tracking-[1.1px] lg:text-[24px] md:text-[20px] text-[16px] max-w-[1650px] mx-auto w-[90%]">
-        <h2 className={props.department || props.service ? "hidden" : "mt-[95px] mx-auto text-center font-extrabold text-[1em] 2md:mb-[20px] mb-[25px]"}>Departemen dan Layanan</h2>
+        <h2 className={props.department || props.service ? "hidden" : "mt-[70px] mx-auto text-center font-extrabold text-[1em] 2md:mb-[20px] mb-[25px]"}>Departemen dan Layanan</h2>
 
         {/*department*/}
         <div className="mb-[60px]">

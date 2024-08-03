@@ -7,7 +7,6 @@ import Link from 'next/link'
 import './style.css'
 import { usePathname } from 'next/navigation';
 import brainIcon from "./assets/brain--medical-health-brain.svg"
-import { getDepartemen, getLayanan } from '@/sanity/sanity.query'
 
 const NavbarClient = (props) => {
 

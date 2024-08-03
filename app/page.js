@@ -96,10 +96,6 @@ async function Home() {
   const faq = await fetchFaq();
   const information = await fetchInformation();
 
-  console.log(usp)
-  console.log(heading)
-
-
   return (
     <div className="relative bg-[#F6F6F6]">
       <Navbar departemen={departemen} layanan={layanan}/>
