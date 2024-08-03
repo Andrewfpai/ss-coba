@@ -127,7 +127,10 @@ const Department = (props) => {
     }
 
 
-    
+    console.log("departmentDisplay: ",state.departmentDisplay)
+    console.log("serviceDisplay: ", state.serviceDisplay)
+    console.log("props.departemen: ", props.departemen)
+    console.log("props.layanan: ", props.layanan)
 
     
   return (
@@ -184,6 +187,22 @@ const Department = (props) => {
             
             <div className="department-service-container flex justify-between flex-wrap 2md:gap-y-[2em] 2md:gap-x-[1.25em] gap-[0.75em] select-none">
 
+              {state.departmentDisplay[0].name}
+              <br/>
+              {state.departmentDisplay[0].icon}
+              <br/>
+              {state.serviceDisplay[0].name}
+              <br/>
+              {state.serviceDisplay[0].icon}
+              <br/>
+              {props.departemen[1].name}
+              <br/>
+              {props.departemen[1].icon}
+              <br/>
+              {props.layanan[1].name}
+              <br/>
+              {props.layanan[1].icon}
+              <br/>
 
                 {state.serviceDisplay?.map((content,index) => {
                   if (content.name != props.service) {
