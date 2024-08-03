@@ -147,14 +147,14 @@ const Department = (props) => {
             
             <div className="department-service-container flex justify-between flex-wrap 2md:gap-[1.25em] 2md:gap-y-[2em] gap-[0.75em] select-none">
 
-                {state.departmentDisplay?.map((content,index) => {
+                {state.departmentDisplay.map((content,index) => {
                   if (content.name != props.department) {
                     return (
                       
                         <div key={index} className="department-service-box department-gradient 2l:w-[24.1875em] sm:w-[31%] 2xs:w-[48%] w-[70%] lg:h-[15.625em] h-[13em] rounded-[15px] font-bold text-[0.667em] tracking-[0.4px] sm:mx-0 mx-auto">
-                            <Link href={"/departemen-kami/"+content.href} className="flex flex-col items-center justify-center gap-[1.25em] w-full h-full" passHref>
-                              <Image  width={0} height={0} sizes='100vw' className="w-[3.5em]" src={content?.icon} alt="" />
-                              <h3 className="">{content?.name}</h3>
+                            <Link href={"/departemen-kami/"+content.href} className="flex flex-col items-center justify-center gap-[1.25em] w-full h-full relative z-[50]" passHref>
+                              <Image  width={0} height={0} sizes='100vw' className="w-[3.5em] relative z-[100]" src={content.icon} alt="" />
+                              <h3 className="relative z-[100]">{content.name}</h3>
                             </Link>
                         </div>
                       
@@ -187,7 +187,7 @@ const Department = (props) => {
             
             <div className="department-service-container flex justify-between flex-wrap 2md:gap-y-[2em] 2md:gap-x-[1.25em] gap-[0.75em] select-none">
 
-              {state.departmentDisplay[0].name}
+              {/* {state.departmentDisplay[0].name}
               <br/>
               {state.departmentDisplay[0].icon}
               <br/>
@@ -202,20 +202,20 @@ const Department = (props) => {
               {props.layanan[1].name}
               <br/>
               {props.layanan[1].icon}
-              <br/>
+              <br/> */}
 
                 {state.serviceDisplay?.map((content,index) => {
                   if (content.name != props.service) {
                     return (
               
                         <div key={index} className="department-service-box service-gradient relative 2l:w-[24.1875em] sm:w-[31%] 2xs:w-[48%] w-[70%] lg:h-[15.625em] h-[13em] rounded-[15px] font-bold text-[0.667em] tracking-[0.4px] sm:mx-0 mx-auto">
-                            <Link key={index} href={"/layanan-kami/"+content.href} className="w-full h-full flex flex-col items-center justify-center gap-[1.25em]" passHref>
+                            {/* <Link key={index} href={"/layanan-kami/"+content.href} className="w-full h-full flex flex-col items-center justify-center gap-[1.25em]" passHref> */}
                               <Image width={0} height={0} sizes='100vw' className="w-[3.5em]" src={content?.icon} alt="" />
                               <h3 className="">{content?.name}</h3>
                               <div className={content?.isPromo?'promo absolute top-[0.75em] left-[0.8em] bg-[#FF0000] w-[4.625em] h-[1.875em] rounded-[1.25em] pt-[0.3em] text-white':'hidden'}>
                                   <div className=" font-black text-center text-[0.875em]">PROMO</div>
                               </div>
-                            </Link>
+                            {/* </Link> */}
                         </div>
                  
                     )
