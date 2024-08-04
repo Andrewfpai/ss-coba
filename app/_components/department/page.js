@@ -216,8 +216,8 @@ const Department = (props) => {
                     return (
               
                       <div key={index} className="department-service-box service-gradient relative 2l:w-[24.1875em] sm:w-[31%] 2xs:w-[48%] w-[70%] lg:h-[15.625em] h-[13em] rounded-[15px] font-bold text-[0.667em] tracking-[0.4px] sm:mx-0 mx-auto">
-                        <Link key={index} href={"/layanan-kami/"+content.href} className="w-full h-full">
-                          <div className="w-full h-full flex flex-col items-center justify-center gap-[1.25em]">
+                        <Link key={index} href={"/layanan-kami/"+content.href} className="w-full h-full !bg-transparent">
+                          <div className="w-full h-full flex flex-col items-center justify-center gap-[1.25em] relative z-50">
                             <Image width={0} height={0} sizes='100vw' className="w-[3.5em]" src={content?.icon} alt="" />
                             <h3 className="">{content?.name}</h3>
                             <div className={content?.isPromo?'promo absolute top-[0.75em] left-[0.8em] bg-[#FF0000] w-[4.625em] h-[1.875em] rounded-[1.25em] pt-[0.3em] text-white':'hidden'}>
