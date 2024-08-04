@@ -154,7 +154,7 @@ const Department = (props) => {
                     return (
                         
                         <div onClick={() => handleRouter("/departemen-kami/"+content.href)} key={index} className="department-service-box department-gradient relative 2l:w-[24.1875em] sm:w-[31%] 2xs:w-[48%] w-[70%] lg:h-[15.625em] h-[13em] rounded-[15px] font-bold text-[0.667em] tracking-[0.4px] sm:mx-0 mx-auto">
-                            <div className="absolute w-full h-full flex flex-col items-center justify-center gap-[1.25em]">
+                            <div className=""> {/*w-full h-full flex flex-col items-center justify-center gap-[1.25em]*/}
                               <Image width={0} height={0} sizes='100vw' className="w-[3.5em]" src={content.icon} alt="" />
                               <h3 className="">{content.name}</h3>
                             </div>
