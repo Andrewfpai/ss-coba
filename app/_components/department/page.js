@@ -1,12 +1,12 @@
 "use client"
 
-import React, {useState, useEffect, useReducer} from 'react';
+import React, {useState, useEffect, useReducer, } from 'react';
 import PropTypes from 'prop-types';
 import Image from 'next/image';
 import "./style.css";
 import brainIcon from "./assets/brain--medical-health-brain.svg";
 import Link from "next/link";
-
+import {useRouter} from 'next/navigation';
 // The Code below is so unstructured and chaotic. it's unmodifiable. 
 // Note : props.departemen = the whole list of departments
 //        props.department = the department in the route 'departemen-kami' (if any) (string)
@@ -54,6 +54,7 @@ const reducer = (state, action) => {
 };
 
 const Department = (props) => {
+
   
 
       //useReducer
@@ -126,13 +127,14 @@ const Department = (props) => {
       dispatch({ type: ACTIONS.SET_SHOWING_ALL_SERVICE, payload: !state.showingAllService });
     }
 
+    // Handle routing bug for safari
+    const router = useRouter();
 
-    console.log("departmentDisplay: ",state.departmentDisplay)
-    console.log("serviceDisplay: ", state.serviceDisplay)
-    console.log("props.departemen: ", props.departemen)
-    console.log("props.layanan: ", props.layanan)
+    const handleRouter = (path) => {
+      router.push(path);
+    }
+  
 
-    
   return (
     <div id="department" className="font-raleway text-[#503129] tracking-[1.1px] lg:text-[24px] md:text-[20px] text-[16px] max-w-[1650px] mx-auto w-[90%]">
         <h2 className={props.department || props.service ? "hidden" : "mt-[70px] mx-auto text-center font-extrabold text-[1em] 2md:mb-[20px] mb-[25px]"}>Departemen dan Layanan</h2>
@@ -150,13 +152,11 @@ const Department = (props) => {
                 {state.departmentDisplay.map((content,index) => {
                   if (content.name != props.department) {
                     return (
-                      
-                      <Link key={index} href={"/departemen-kami/"+content.href} className="department-service-box department-gradient 2l:w-[24.1875em] sm:w-[31%] 2xs:w-[48%] w-[70%] lg:h-[15.625em] h-[13em] rounded-[15px] font-bold text-[0.667em] tracking-[0.4px] sm:mx-0 mx-auto" passHref>
-                        <div className="flex flex-col items-center justify-center gap-[1.25em] w-full h-full relative z-50">
-                            <Image  width={0} height={0} sizes='100vw' className="w-[3.5em] relative z-50" src={content.icon} alt="" />
+                        
+                        <div onClick={() => handleRouter("/departemen-kami/"+content.href)} key={index} className="department-service-box department-gradient 2l:w-[24.1875em] sm:w-[31%] 2xs:w-[48%] w-[70%] lg:h-[15.625em] h-[13em] rounded-[15px] font-bold text-[0.667em] tracking-[0.4px] sm:mx-0 mx-auto flex flex-col items-center justify-center gap-[1.25em] w-full h-full relative z-50">
+                            <Image width={0} height={0} sizes='100vw' className="w-[3.5em] relative z-50" src={content.icon} alt="" />
                             <h3 className="relative z-50">{content.name}</h3>
                         </div>
-                      </Link>
 
                   // <div key={index} className="department-service-box department-gradient 2l:w-[24.1875em] sm:w-[31%] 2xs:w-[48%] w-[70%] lg:h-[15.625em] h-[13em] rounded-[15px] font-bold text-[0.667em] tracking-[0.4px] sm:mx-0 mx-auto">
                   // <Link href={"/departemen-kami/"+content.href} className="flex flex-col items-center justify-center gap-[1.25em] w-full h-full relative z-[50]">
@@ -214,17 +214,12 @@ const Department = (props) => {
                 {state.serviceDisplay?.map((content,index) => {
                   if (content.name != props.service) {
                     return (
-              
-                      <div key={index} className="department-service-box service-gradient relative 2l:w-[24.1875em] sm:w-[31%] 2xs:w-[48%] w-[70%] lg:h-[15.625em] h-[13em] rounded-[15px] font-bold text-[0.667em] tracking-[0.4px] sm:mx-0 mx-auto">
-                        <Link key={index} href={"/layanan-kami/"+content.href} className="w-full h-full !bg-transparent" passHref>
-                          <div className="w-full h-full flex flex-col items-center justify-center gap-[1.25em] relative z-50">
+                      <div key={index} onClick={() => handleRouter("/layanan-kami/"+content.href)} className="department-service-box service-gradient relative 2l:w-[24.1875em] sm:w-[31%] 2xs:w-[48%] w-[70%] lg:h-[15.625em] h-[13em] rounded-[15px] font-bold text-[0.667em] tracking-[0.4px] sm:mx-0 mx-auto w-full h-full flex flex-col items-center justify-center gap-[1.25em]">
                             <Image width={0} height={0} sizes='100vw' className="w-[3.5em]" src={content?.icon} alt="" />
                             <h3 className="">{content?.name}</h3>
                             <div className={content?.isPromo?'promo absolute top-[0.75em] left-[0.8em] bg-[#FF0000] w-[4.625em] h-[1.875em] rounded-[1.25em] pt-[0.3em] text-white':'hidden'}>
-                                <div className=" font-black text-center text-[0.875em]">PROMO</div>
+                                <div className="font-black text-center text-[0.875em]">PROMO</div>
                             </div>
-                          </div>
-                        </Link>
                       </div>
 
                         // <div key={index} className="department-service-box service-gradient relative 2l:w-[24.1875em] sm:w-[31%] 2xs:w-[48%] w-[70%] lg:h-[15.625em] h-[13em] rounded-[15px] font-bold text-[0.667em] tracking-[0.4px] sm:mx-0 mx-auto">
