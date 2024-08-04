@@ -153,9 +153,11 @@ const Department = (props) => {
                   if (content.name != props.department) {
                     return (
                         
-                        <div onClick={() => handleRouter("/departemen-kami/"+content.href)} key={index} className="department-service-box department-gradient 2l:w-[24.1875em] sm:w-[31%] 2xs:w-[48%] w-[70%] lg:h-[15.625em] h-[13em] rounded-[15px] font-bold text-[0.667em] tracking-[0.4px] sm:mx-0 mx-auto flex flex-col items-center justify-center gap-[1.25em]">
-                            <Image width={0} height={0} sizes='100vw' className="w-[3.5em] relative z-50" src={content.icon} alt="" />
-                            <h3 className="">{content.name}</h3>
+                        <div onClick={() => handleRouter("/departemen-kami/"+content.href)} key={index} className="department-service-box department-gradient relative 2l:w-[24.1875em] sm:w-[31%] 2xs:w-[48%] w-[70%] lg:h-[15.625em] h-[13em] rounded-[15px] font-bold text-[0.667em] tracking-[0.4px] sm:mx-0 mx-auto">
+                            <div className="absolute w-full h-full flex flex-col items-center justify-center gap-[1.25em]">
+                              <Image width={0} height={0} sizes='100vw' className="w-[3.5em]" src={content.icon} alt="" />
+                              <h3 className="">{content.name}</h3>
+                            </div>
                         </div>
 
                   // <div key={index} className="department-service-box department-gradient 2l:w-[24.1875em] sm:w-[31%] 2xs:w-[48%] w-[70%] lg:h-[15.625em] h-[13em] rounded-[15px] font-bold text-[0.667em] tracking-[0.4px] sm:mx-0 mx-auto">
@@ -214,9 +216,11 @@ const Department = (props) => {
                 {state.serviceDisplay?.map((content,index) => {
                   if (content.name != props.service) {
                     return (
-                      <div key={index} onClick={() => handleRouter("/layanan-kami/"+content.href)} className="department-service-box service-gradient relative 2l:w-[24.1875em] sm:w-[31%] 2xs:w-[48%] w-[70%] lg:h-[15.625em] h-[13em] rounded-[15px] font-bold text-[0.667em] tracking-[0.4px] sm:mx-0 mx-auto flex flex-col items-center justify-center gap-[1.25em]">
-                            <Image width={0} height={0} sizes='100vw' className="w-[3.5em]" src={content?.icon} alt="" />
-                            <h3 className="">{content?.name}</h3>
+                      <div key={index} onClick={() => handleRouter("/layanan-kami/"+content.href)} className="department-service-box service-gradient relative 2l:w-[24.1875em] sm:w-[31%] 2xs:w-[48%] w-[70%] lg:h-[15.625em] h-[13em] rounded-[15px] font-bold text-[0.667em] tracking-[0.4px] sm:mx-0 mx-auto"> {/**/}
+                            <div className="center-absolute-shit w-full h-full flex flex-col items-center justify-center gap-[1.25em]">
+                              <Image width={0} height={0} sizes='100vw' className="w-[3.5em]" src={content?.icon} alt="" />
+                              <h3 className="">{content?.name}</h3>
+                            </div>
                             <div className={content?.isPromo?'promo absolute top-[0.75em] left-[0.8em] bg-[#FF0000] w-[4.625em] h-[1.875em] rounded-[1.25em] pt-[0.3em] text-white':'hidden'}>
                                 <div className="font-black text-center text-[0.875em]">PROMO</div>
                             </div>

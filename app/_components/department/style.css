@@ -44,3 +44,11 @@
     padding-top:0.12em;
 }
 
+/*Solve the fucking safari problem*/ 
+
+.center-absolute-shit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
