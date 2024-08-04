@@ -24,8 +24,8 @@ export default function Services(props){
   return (
     <div className="overflow-y-auto min-h-full flex flex-col mx-auto font-raleway bg-[#F6F6F6] text-[24px]">
       {/* {console.log("layanan",promo)} */}
-        <div className='flex flex-col bg-[rgba(255,233,123,0.42)] py-9 mt-[120px] md:mt-[170px] '>
-            {matchingLayanan?<Image width={0} height={0} sizes='100vw' className='sm:w-[60px] w-[20px] mx-auto' src={matchingLayanan?.icon} alt={"Icon "+matchingLayanan?.name}/>:null}
+        <div className=' bg-[rgba(255,233,123,0.42)] py-9 mt-[120px] md:mt-[170px] '>
+            {matchingLayanan?<Image width={0} height={0} sizes='100vw' className='sm:w-[60px] w-[40px] mx-auto' src={matchingLayanan?.icon} alt={"Icon "+matchingLayanan?.name}/>:null}
             {matchingLayanan && (
                 <h1 className='mt-5 text-center text-lg xs:text-2xl md:text-[32px] text-mainBrown font-bold tracking-[0.95px]'>
                   {matchingLayanan?.name}

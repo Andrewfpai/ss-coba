@@ -4,11 +4,10 @@ import Image from 'next/image'
 import Link from 'next/link';
 import './style.css'
 
-
-
-
 import CalendarIcon from './assets/calendar-icon.png'
 import jamIcon from './assets/jam-icon.png'
+import {getCroppedImageSrc} from '@/sanity/sanity.image'
+
 
 
 import PortableTextRenderer from '@/app/_components/portableText/PortableTextRenderer';
@@ -31,8 +30,8 @@ export default function Departments(props){
     return(
         <div id="department" className="overflow-y-auto min-h-full flex flex-col mx-auto font-raleway bg-[#F6F6F6] ">
             {/* {console.log("departemen",departemen)} */}
-            <div className='flex flex-col bg-mainGray py-9 mt-[120px] md:mt-[170px] '>
-                {matchingDepartemen?<Image width={0} height={0} sizes='100vw' className='sm:w-[60px] w-[20px] mx-auto' src={matchingDepartemen?.icon} alt={"Icon "+matchingDepartemen.name}/> :null}
+            <div className=' bg-mainGray py-9 mt-[120px] md:mt-[170px] '>
+                {matchingDepartemen?<Image width={0} height={0} sizes='100vw' className='sm:w-[60px] w-[40px] mx-auto' src={matchingDepartemen?.icon} alt={"Icon "+matchingDepartemen.name}/> :null}
                 {/* {console.log("matchingDepartemen",matchingDepartemen)} */}
                 {/* {console.log("Foto",matchingDepartemen?.dokter[0]?.foto)} */}
 
@@ -61,7 +60,8 @@ export default function Departments(props){
                         
 
                         <div className='max-w-[523px]'>
-                            <Image priority width={0} height={0} sizes='100vw' className="w-[523px] rounded-[15px] object-cover object-top md:object-center h-[170px] md:h-[360px]" src={item?.foto} alt={"Foto "+item?.nama}/>
+
+                            <Image priority width={0} height={0} sizes='100vw' className="w-[300px] md:w-[523px] rounded-[15px]  object-cover object-center md:object-center h-[200px] md:h-[360px]" src={getCroppedImageSrc(item?.foto_custom)} alt={"Foto "+item?.nama}/>
                         </div>
 
                             {/* SECTION KANAN DOKTER KAMI */}

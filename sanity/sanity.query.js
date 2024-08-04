@@ -85,7 +85,7 @@ export async function getDepartemen(){
             "jadwalPraktek": jadwalPraktek[],
             'foto': foto.asset->url,
             'caption': foto.caption,
-            
+            'foto_custom':foto
           },
           'icon': icon.asset->url,
           syaratKetentuan

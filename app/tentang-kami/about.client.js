@@ -11,7 +11,7 @@ import { useState, useEffect } from 'react';
 import { getDokter, getInformation, getTentangKami } from '@/sanity/sanity.query';
 // import {SanityImageComponent} from '@/sanity/sanity.image'
 // import { SanityImage } from "sanity-image"
-import { urlFor } from '@/sanity/sanity.client';
+
 import {getCroppedImageSrc} from '@/sanity/sanity.image'
 
 import locationIcon from '../_components/information/assets/location-icon.png'

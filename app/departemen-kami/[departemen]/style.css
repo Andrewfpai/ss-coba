@@ -88,3 +88,11 @@
   background:white;
   padding-top:0.12em;
 }
+
+.center-absolute-shit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index:50;
+}
