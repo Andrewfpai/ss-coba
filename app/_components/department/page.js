@@ -1,10 +1,10 @@
 "use client"
 
 import React, {useState, useEffect, useReducer, } from 'react';
-import PropTypes from 'prop-types';
+
 import Image from 'next/image';
 import "./style.css";
-import brainIcon from "./assets/brain--medical-health-brain.svg";
+
 import Link from "next/link";
 import {useRouter} from 'next/navigation';
 // The Code below is so unstructured and chaotic. it's unmodifiable. 

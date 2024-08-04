@@ -1,5 +1,5 @@
 import React from 'react';
-import { PortableText } from '@portabletext/react';
+
 
 // Define your custom components
 const components = {

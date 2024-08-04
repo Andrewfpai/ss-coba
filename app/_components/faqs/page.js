@@ -3,7 +3,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import BlockContent from '@sanity/block-content-to-react';
+
 import arrow from './assets/arrow.svg';
 import './style.css';
 

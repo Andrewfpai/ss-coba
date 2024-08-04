@@ -1,6 +1,6 @@
 import './style.css'
 import Image from "next/image"
-import Icon from "./assets/icon1.png"
+
 import Link from 'next/link'
 
 
