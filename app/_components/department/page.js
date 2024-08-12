@@ -181,7 +181,7 @@ const Department = (props) => {
             }
     
             </div>
-            <button className="see-more-btn text-[0.6em] font-semibold flex justify-center items-center w-[13em] h-[3.8em] bg-[#FFE97B] rounded-[1.35em] shadow-button-tw mx-auto mt-[3.75em] text-[#503129] tracking-[0.2px]" onClick={handleSeeMoreDepartment}>{state.showingAllDepartment ? "Lihat Sebagian" : "Lihat Selengkapnya"}</button>
+            <button className="see-more-btn text-[0.6em] font-semibold flex justify-center items-center w-[13em] h-[3.8em] bg-[#FFE97B] rounded-[1.5em] shadow-button-tw  mx-auto mt-[3.75em] text-[#503129] tracking-[0.2px]" onClick={handleSeeMoreDepartment}>{state.showingAllDepartment ? "Lihat Sebagian" : "Lihat Selengkapnya"}</button>
 
         </div>
 
@@ -233,7 +233,7 @@ const Department = (props) => {
             }
                 
             </div>
-            <button className="see-more-btn text-[0.6em] font-semibold flex justify-center items-center w-[13em] h-[3.8em] bg-[#FFD604] rounded-[1.35em] shadow-button-tw mx-auto mt-[3.75em] text-[#503129] tracking-[0.2px]" onClick={handleSeeMoreService}>{state.showingAllService ? "Lihat Sebagian" : "Lihat Selengkapnya"}</button>
+            <button className="see-more-btn text-[0.6em] font-semibold flex justify-center items-center w-[13em] h-[3.8em] bg-[#FFD604] rounded-[1.5em] shadow-button-tw mx-auto mt-[3.75em] text-[#503129] tracking-[0.2px]" onClick={handleSeeMoreService}>{state.showingAllService ? "Lihat Sebagian" : "Lihat Selengkapnya"}</button>
 
         </div>
         

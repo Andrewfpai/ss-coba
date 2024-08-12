@@ -25,9 +25,9 @@ module.exports = {
 
       },
       boxShadow: {
-        'button-tw': 'inset 2px 4px 6.1px rgba(0, 0, 0, 0.15), inset -2px -4px 6.1px rgba(0,0,0,0.25)',
+        'button-tw': 'inset 0px 2px 5px rgba(0, 0, 0, 0.15), inset 0px -2px 5px rgba(0,0,0,0.25)',
         'button-outside-tw': '2px 4px 6.1px rgba(0, 0, 0, 0.25), -2px 0px 6.1px rgba(0,0,0,0.25)',
-        'shadow-button-tw': 'inset 0px 4px 6.1px rgba(0, 0, 0, 0.25)',
+        'shadow-button-tw': 'inset 0px 2px 5px rgba(0, 0, 0, 0.25)',
       },
 
 

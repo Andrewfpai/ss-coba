@@ -98,7 +98,7 @@ export default function Departments(props){
                                     </div>
                                 </div>
 
-                                <Link href="https://wa.me/628112681977" passHref><button className="text-[0.667em] font-raleway font-semibold px-[20px] py-[10px] md:px-[30px] md:py-[17px] bg-brightYellow rounded-[10px] md:rounded-[20px] shadow-button-tw hover:bg-mainOrange ease-out duration-300 mt-2 md:mt-11">Hubungi Dokter</button></Link>
+                                <Link href="https://wa.me/628112681977" passHref><button className="text-[0.667em] font-raleway font-semibold px-[20px] py-[10px] md:px-[30px] md:py-[17px] bg-brightYellow rounded-[10px] md:rounded-[25px] shadow-button-tw hover:bg-mainOrange ease-out duration-300 mt-2 md:mt-11">Hubungi Dokter</button></Link>
                             </div>
                     </div>
                             )})} 
@@ -124,9 +124,9 @@ export default function Departments(props){
             </div>
 
                        
-            <div className="h-[0.75em] w-full bg-[#FF9704] mt-[115px] mb-[3em]"></div>
+            <div className="h-[0.75em] w-full bg-[#FF9704] mt-[115px] mb-[2em]"></div>
 
-            <div className="pt-[95px] mb-[7.29em] text-[#503129] tracking-[1.1px] lg:text-[24px] md:text-[20px] text-[16px] ">
+            <div className="md:pt-[1em] mb-[7.29em] text-[#503129] tracking-[1.1px] lg:text-[24px] md:text-[20px] text-[16px] ">
                 <h2 className="mx-auto text-center font-extrabold text-[1em] 2md:mb-[20px] mb-[25px]">Departemen dan Layanan Lainnya</h2>
             
                 <Department department={matchingDepartemen?.name} layanan={layanan} departemen={departemen}/>                
